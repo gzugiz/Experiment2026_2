@@ -23,7 +23,7 @@ const n = 32;
 
 let tx1 = "Köszöntjük kísérletünkben! A kutatásban olyan 18 és 70 év közötti személyek vehetnek részt, akik nem rendelkeznek neurológiai és/vagy pszichiátriai előtörténettel. A részvétel önkéntes és anonim. A vizsgálat során bármikor, indoklás és hátrányos következmények nélkül megszakíthatja a részvételt az ESC billentyűvel, ez esetben az addig rögzített adatok nem kerülnek felhasználásra. A kísérletben bemutatott szöveges leírások fiktív megállapítások. Kérjük, hogy a vizsgálatot kipihent állapotban kezdje meg! A kutatással kapcsolatos kérdések esetén a kutatás koordinátora az alábbi e-mail címen érhető el: balog.lea.szilvia@gmail.com (A kutatás szakmai mentorai: Séllei Beatrix és Pajkossy Péter)\nA továbblépéshez nyomjon meg egy tetszőleges billentyűt!";
 let tx2 = "A továbblépéssel és a kísérlet megkezdésével Ön kijelenti, hogy:\n\n18 és 70 év közötti életkorú\n\nMagyar anyanyelvű\n\nKellő tájékoztatást kapott, hogy eldönthesse, részt kíván-e venni a vizsgálatban\n\nKapott lehetőséget és/vagy elérhetőséget ahhoz, hogy kérdéseit feltegye\n\nMegértette, hogy részvételét bármikor, indoklás és hátrányos következmények nélkül visszavonhatja\n\nA vizsgálat megkezdéséhez kérjük, nyomja meg az Szóköz (Space) billentyűt!";
-let tx3 = "A következőkben hangulati fogalmak közül válassza ki, hogy mostanában milyen mértékben vonatkoznak Önre! Ezt 1-től 5-ig terjedő skálán adja meg (1 a legkevésbé jellemző, 5 a leginkább jellemző), az adott fogalom melletti megfelelő körbe kattintva adja meg válaszait! Amint mindegyik fogalomra bejelölte válaszát, a szóköz (space) billentyűvel tud majd továbblépni.\n\nA továbblépéshez nyomjon meg egy tetszőleges billentyűt!";
+let tx3 = "A következő hangulati fogalmak közül válassza ki, hogy mostanában milyen mértékben vonatkoznak Önre! Ezt 1-től 5-ig terjedő skálán adja meg (1 a legkevésbé jellemző, 5 a leginkább jellemző), az adott fogalom melletti megfelelő körbe kattintva adja meg válaszait! Amint mindegyik fogalomra bejelölte válaszát, a szóköz (space) billentyűvel tud majd továbblépni.\n\nA továbblépéshez nyomjon meg egy tetszőleges billentyűt!";
 let tx4 = "A következőkben egy szöveget kell majd nagyon figyelmesen elolvasnia.\nKoncentráljon minden részletére!\nElolvasása után egy billentyű megnyomásával tud majd továbblépni.\n\n\nA továbblépéshez nyomjon meg egy tetszőleges billentyűt!";
 let tx5 = "A következőkben különböző szavak, fogalmak fognak felvillanni a képernyőn nagyon rövid időtartammal. Ha az előző szövegben található vagy a szöveggel kapcsolatos szót, fogalmat észlel, nyomja meg a szóköz (space) billentyűt, törekedve a leggyorsabb válaszadásra!\n\nA továbblépéshez nyomjon meg egy tetszőleges billentyűt!";
 let tx6 = "A következőkben a képernyőn egyjegyű számok fognak felvillanni egymást követően, kérjük adja össze az aktuális értéket a közvetlenül előtte megjelenővel! Az eredményt a billentyűzete segítségével tudja majd begépelni a villogó kurzor által jelzett helyre, majd ezt követően kattintson a Tovább gombra!\nFontos, hogy a lehető leggyorsabban válaszoljon!\nElőször egy példa ábra szemlélteti a feladatot.\n\nA továbblépéshez nyomjon meg egy tetszőleges billentyűt!";
@@ -327,7 +327,7 @@ async function experimentInit() {
   text_6 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_6',
-    text: 'Kérljük adja meg a nemét a megfelelő szóra kattintva az alábbi mezőben!',
+    text: 'Kérjük adja meg a nemét a megfelelő szóra kattintva az alábbi mezőben!',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0.2], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -1376,7 +1376,7 @@ function InstructionGlobalRoutineEnd(snapshot) {
     if (currentLoop instanceof MultiStairHandler) {
       currentLoop.addResponse(key_resp.corr, level);
     }
-    psychoJS.experiment.addData('key_resp.keys', key_resp.keys);
+    //psychoJS.experiment.addData('key_resp.keys', key_resp.keys);
     if (typeof key_resp.keys !== 'undefined') {  // we had a response
         //psychoJS.experiment.addData('key_resp.rt', key_resp.rt);
         routineTimer.reset();
