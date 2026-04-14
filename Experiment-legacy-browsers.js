@@ -1730,9 +1730,9 @@ function InstructionPANASRoutineEnd(snapshot) {
     if (currentLoop instanceof MultiStairHandler) {
       currentLoop.addResponse(key_resp_8.corr, level);
     }
-    psychoJS.experiment.addData('key_resp_8.keys', key_resp_8.keys);
+    //psychoJS.experiment.addData('key_resp_8.keys', key_resp_8.keys);
     if (typeof key_resp_8.keys !== 'undefined') {  // we had a response
-        psychoJS.experiment.addData('key_resp_8.rt', key_resp_8.rt);
+        //psychoJS.experiment.addData('key_resp_8.rt', key_resp_8.rt);
         routineTimer.reset();
         }
     
