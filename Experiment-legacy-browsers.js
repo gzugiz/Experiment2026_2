@@ -2508,6 +2508,7 @@ function TEXTRoutineBegin(snapshot) {
         }
     }
     
+    psychoJS.experiment.addData('actualtext', act);
     mainText.setText(actual);
     TextResp.keys = undefined;
     TextResp.rt = undefined;
