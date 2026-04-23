@@ -1685,7 +1685,7 @@ function InstructionPANASRoutineEachFrame() {
     }
 
     if (key_resp_8.status === PsychoJS.Status.STARTED) {
-      let theseKeys = key_resp_8.getKeys({keyList: [], waitRelease: false});
+      let theseKeys = key_resp_8.getKeys({keyList: ['space'], waitRelease: false});
       _key_resp_8_allKeys = _key_resp_8_allKeys.concat(theseKeys);
       if (_key_resp_8_allKeys.length > 0) {
         key_resp_8.keys = _key_resp_8_allKeys[_key_resp_8_allKeys.length - 1].name;  // just the last key pressed
